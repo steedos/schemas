@@ -302,7 +302,7 @@
                     "enum": ["calendar"]
                 },
                 "filter_scope": {
-                    "type": "boolean",
+                    "type": "string",
                     "description": "范围",
                     "enum": ["space", "mine"]
                 },
