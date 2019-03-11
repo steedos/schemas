@@ -439,7 +439,7 @@
                 },
                 "when": {
                     "type":"string",
-                    "description": "在什么时候触发：/r before.insert： 新增记录之前；/r after.insert：新增记录之后；before.update：修改记录之前；after.update：修改记录之后；after.remove：删除记录之前；after.remove：删除记录之后；",
+                    "description": "在什么时候触发：before.insert： 新增记录之前；after.insert：新增记录之后；before.update：修改记录之前；after.update：修改记录之后；after.remove：删除记录之前；after.remove：删除记录之后；",
                     "enum": ["before.insert","after.insert","before.update","after.update","before.remove","after.remove"]
                 },
                 "todo": {
