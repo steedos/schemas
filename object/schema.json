@@ -274,7 +274,7 @@
                     "description": "多行文本默认行数"
                 },
                 "options": {
-                    "type": "string",
+                    "type": ["string", "array"],
                     "description": "字段选项"
                 },
                 "description": {
@@ -304,7 +304,7 @@
                 "filter_scope": {
                     "type": "boolean",
                     "description": "范围",
-                    "enum": ["space"]
+                    "enum": ["space", "mine"]
                 },
                 "columns": {
                     "type": "array",
@@ -313,6 +313,10 @@
                 "filters": {
                     "type": "array",
                     "description": "过滤条件"
+                },
+                "filter_fields": {
+                    "type":"array",
+                    "description": "过滤的字段"
                 }
             }
         },
@@ -353,7 +357,7 @@
             "description": "对象权限",
             "additionalProperties": false,
             "properties":{
-                "allowRead ": {
+                "allowRead": {
                     "type": "boolean",
                     "description": "允许查看"
                 },
