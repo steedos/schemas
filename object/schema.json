@@ -284,6 +284,10 @@
                 "filterable": {
                     "type":"boolean",
                     "description": "过滤器默认字段"
+                },
+                "inlineHelpText": {
+                    "type":"string",
+                    "description": "提示文本"
                 }
             }
         },
