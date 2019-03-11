@@ -211,11 +211,11 @@
                     "description": "分组名称"
                 },
                 "defaultValue": {
-                    "type": "string",
+                    "type": ["string", "boolean", "array"],
                     "description": "默认值"
                 },
                 "allowedValues": {
-                    "type": "string",
+                    "type": ["string", "boolean", "array"],
                     "description": "允许的值"
                 },
                 "multiple": {
@@ -280,6 +280,10 @@
                 "description": {
                     "type": "string",
                     "description": "字段描述"
+                },
+                "filterable": {
+                    "type":"boolean",
+                    "description": "过滤器默认字段"
                 }
             }
         },
