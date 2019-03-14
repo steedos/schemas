@@ -36,8 +36,8 @@
             "description": "对象名称"
         },
         "extend": {
-            "type": "boolean",
-            "description": "继承对消标记。 true: 如果对象已存在，则在原对象上进行修改"
+            "type": "string",
+            "description": "要继承的对象标识"
         },
         "label": {
             "type": "string",
