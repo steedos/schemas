@@ -99,6 +99,10 @@
             "type": "boolean",
             "description": "允许数据夸工作区使用"
         },
+        "enable_tree": {
+            "type": "boolean",
+            "description": "树状显示"
+        },
         "is_view": {
             "type": "boolean",
             "description": "此对象是否对应数据库中的视图"
@@ -127,7 +131,7 @@
             "type":"object",
             "additionalProperties":false,
             "patternProperties": {
-                "^[a-zA-Z_]\\w*(\\.\\$\\.\\w+)?[a-zA-Z0-9]*$": {"$ref": "#/definitions/field"}
+                "^[a-zA-Z_]\\w*(\\.\\$\\.\\w+)?[a-zA-Z0-9].*$": {"$ref": "#/definitions/field"}
             }
         },
         "list_views": {
@@ -163,7 +167,7 @@
         "field": {
             "type": "object",
             "description": "对象字段",
-            "additionalProperties": false,
+            "additionalProperties": true,
             "properties": {
                 "name": {
                     "type": "string",
@@ -201,7 +205,17 @@
                                 "master_detail",
                                 "grid",
                                 "url",
-                                "email"
+                                "email",
+                                "avatar",
+                                "location",
+                                "image",
+                                "object",
+                                "[object]",
+                                "[Object]",
+                                "[grid]",
+                                "[text]",
+                                "selectCity",
+                                "audio"
                             ]
                         }
                     ]
@@ -215,7 +229,7 @@
                     "description": "分组名称"
                 },
                 "defaultValue": {
-                    "type": ["string", "boolean", "array"],
+                    "type": ["string", "boolean", "array", "integer"],
                     "description": "默认值"
                 },
                 "allowedValues": {
@@ -292,6 +306,26 @@
                 "inlineHelpText": {
                     "type":"string",
                     "description": "提示文本"
+                },
+                "unique": {
+                    "type": "boolean",
+                    "description": "重复"
+                },
+                "optionsFunction": {
+                    "type": "string",
+                    "description": "字段选项函数名称"
+                },
+                "min": {
+                    "type": "integer",
+                    "description": "最小长度"
+                },
+                "max": {
+                    "type": "integer",
+                    "description": "最大长度"
+                },
+                "blackbox": {
+                    "type": "boolean",
+                    "description": "不校验字段类型"
                 }
             }
         },
@@ -312,7 +346,7 @@
                 "filter_scope": {
                     "type": "string",
                     "description": "范围",
-                    "enum": ["space", "mine"]
+                    "enum": ["space", "mine", "all"]
                 },
                 "columns": {
                     "type": "array",
@@ -325,6 +359,10 @@
                 "filter_fields": {
                     "type":"array",
                     "description": "过滤的字段"
+                },
+                "sort": {
+                    "type": "array",
+                    "description": "排序"
                 }
             }
         },
@@ -346,7 +384,7 @@
                     "description": "是否启用"
                 },
                 "visible": {
-                    "type": "boolean",
+                    "type": ["string", "boolean"],
                     "description": "是否有效"
                 },
                 "on": {
