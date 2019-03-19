@@ -167,7 +167,7 @@
         "field": {
             "type": "object",
             "description": "对象字段",
-            "additionalProperties": true,
+            "additionalProperties": false,
             "properties": {
                 "name": {
                     "type": "string",
