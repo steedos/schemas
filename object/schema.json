@@ -161,6 +161,9 @@
             "patternProperties": {
                 "^[a-zA-Z_]\\w*(\\.\\$\\.\\w+)?[a-zA-Z0-9]*$": {"$ref": "#/definitions/trigger"}
             }
+        },
+        "calendar": {
+            "type":"object"
         }
     },
     "definitions": {
@@ -326,6 +329,21 @@
                 "blackbox": {
                     "type": "boolean",
                     "description": "不校验字段类型"
+                },
+                "reference_sort":{
+                    "type": "object",
+                    "description": "排序方式"
+                },
+                "reference_limit": {
+                    "type": "number",
+                    "description": "一次最多显示数据"
+                },
+                "is_company_only": {
+                    "type": "boolean",
+                    "description": "本公司"
+                },
+                "system": {
+                    "type": "string"
                 }
             }
         },
