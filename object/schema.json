@@ -344,6 +344,12 @@
                 },
                 "system": {
                     "type": "string"
+                },
+                "depend_on": {
+                    "type":"array"
+                },
+                "defaultIcon": {
+                    "type": "string"
                 }
             }
         },
