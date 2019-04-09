@@ -417,12 +417,16 @@
                 },
                 "on": {
                     "type": "string",
-                    "description": "显示位置, list: 显示在列表右上角; record: 显示在记录查看页右上角",
-                    "enum": ["list","record"]
+                    "description": "显示位置, list: 显示在列表右上角; record: 显示在记录查看页右上角, record_more: 显示在记录查看页右上角'更多'按钮下",
+                    "enum": ["list","record","record_more"]
                 },
                 "todo": {
                     "type":"string",
                     "description": "执行的脚本"
+                },
+                "sort": {
+                    "type":"number",
+                    "description": "显示顺序"
                 }
             }
         },
