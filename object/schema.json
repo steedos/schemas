@@ -330,6 +330,10 @@
                     "type": "boolean",
                     "description": "不校验字段类型"
                 },
+                "disabled":{
+                    "type":"boolean",
+                    "description": "禁用"
+                },
                 "reference_sort":{
                     "type": "object",
                     "description": "排序方式"
