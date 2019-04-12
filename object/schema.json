@@ -130,10 +130,8 @@
         "methods":{
             "type": "object",
             "description": "对象可执行的方法，用于odata接口",
-            "properties": {
-                "patternProperties": {
-                    "^[a-zA-Z_]\\w*(\\.\\$\\.\\w+)?[a-zA-Z0-9].*$": "string"
-                }
+            "patternProperties": {
+                "^[a-zA-Z_]\\w*(\\.\\$\\.\\w+)?[a-zA-Z0-9].*$": {"$ref": "#/definitions/method"}
             }
         },
         "fields": {
@@ -530,6 +528,9 @@
                     "description": "执行的脚本"
                 }
             }
+        },
+        "method": {
+            "type":"string"
         }
     }
 }
