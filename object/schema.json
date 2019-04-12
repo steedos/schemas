@@ -127,6 +127,15 @@
             "type": "string",
             "description": "对象拥有者"
         },
+        "methods":{
+            "type": "object",
+            "description": "对象可执行的方法，用于odata接口",
+            "properties": {
+                "patternProperties": {
+                    "^[a-zA-Z_]\\w*(\\.\\$\\.\\w+)?[a-zA-Z0-9].*$": "string"
+                }
+            }
+        },
         "fields": {
             "type":"object",
             "additionalProperties":false,
