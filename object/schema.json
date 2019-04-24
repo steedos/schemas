@@ -361,6 +361,14 @@
                 },
                 "defaultIcon": {
                     "type": "string"
+                },
+                "primary": {
+                    "type": "boolean",
+                    "description": "主键"
+                },
+                "generated": {
+                    "type": "boolean",
+                    "description": "自增"
                 }
             }
         },
