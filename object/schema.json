@@ -35,6 +35,10 @@
             "type": "string",
             "description": "对象名称"
         },
+        "tableName":{
+            "type": "string",
+            "description": "数据库表名称"
+        },
         "extend": {
             "type": "string",
             "description": "要继承的对象标识"
