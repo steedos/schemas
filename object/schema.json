@@ -376,21 +376,7 @@
                 },
                 "fieldDBType": {
                     "type": "string",
-                    "description": "字段数据库类型",
-                    "anyOf": [
-                        {
-                            "enum": [
-                                "varchar",
-                                "text",
-                                "number",
-                                "boolean",
-                                "date",
-                                "dateTime",
-                                "json",
-                                "array"
-                            ]
-                        }
-                    ]
+                    "description": "字段数据库类型"
                 }
             }
         },
