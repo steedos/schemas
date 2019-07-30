@@ -33,7 +33,8 @@
     "properties": {
         "name": {
             "type": "string",
-            "description": "对象名称"
+            "description": "对象名称",
+            "pattern": "^[_a-zA-Z][_a-zA-Z0-9]*$"
         },
         "tableName":{
             "type": "string",
@@ -175,6 +176,13 @@
         },
         "calendar": {
             "type":"object"
+        },
+        "listeners": {
+            "type": "object",
+            "additionalProperties":false,
+            "patternProperties": {
+                "^[a-zA-Z_]\\w*(\\.\\$\\.\\w+)?[a-zA-Z0-9]*$": {"$ref": "#/definitions/listener"}
+            }
         }
     },
     "definitions": {
@@ -547,6 +555,45 @@
         },
         "method": {
             "type":"string"
+        },
+        "listener": {
+            "type":"object",
+            "description": "触发器",
+            "additionalProperties": false,
+            "properties":{
+                "name": {
+                    "type": "string",
+                    "description": "监听器名称"
+                },
+                "listenTo": {
+                    "type": "string",
+                    "description": "监听对象名"
+                },
+                "beforeInsert": {
+                    "type": "string",
+                    "description": "新增前事件"
+                },
+                "beforeUpdate": {
+                    "type": "string",
+                    "description": "修改前事件"
+                },
+                "beforeDelete": {
+                    "type": "string",
+                    "description": "删除前事件"
+                },
+                "afterInsert": {
+                    "type": "string",
+                    "description": "新增后事件"
+                },
+                "afterUpdate": {
+                    "type": "string",
+                    "description": "修改后事件"
+                },
+                "afterDelete": {
+                    "type": "string",
+                    "description": "删除后事件"
+                }
+            }
         }
     }
 }
