@@ -251,7 +251,9 @@
                                 "[grid]",
                                 "[text]",
                                 "selectCity",
-                                "audio"
+                                "audio",
+                                "filesize",
+                                "file"
                             ]
                         }
                     ]
@@ -411,6 +413,10 @@
                 "fieldDBType": {
                     "type": "string",
                     "description": "字段数据库类型"
+                },
+                "collection": {
+                    "type": "string",
+                    "description": "对应对象名"
                 }
             }
         },
@@ -442,6 +448,14 @@
                 "columns": {
                     "type": "array",
                     "description": "列表显示的字段"
+                },
+                "extra_columns": {
+                    "type": "array",
+                    "description": "额外在列表显示的字段"
+                },
+                "order": {
+                    "type": "array",
+                    "description": "排序"
                 },
                 "filters": {
                     "type": [
@@ -504,6 +518,14 @@
                 "sort": {
                     "type": "number",
                     "description": "显示顺序"
+                },
+                "only_detail": {
+                    "type": "boolean",
+                    "description": "是否显示明细"
+                },
+                "is_file": {
+                    "type": "boolean",
+                    "description": "是否是附件"
                 }
             }
         },
