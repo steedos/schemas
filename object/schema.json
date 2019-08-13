@@ -457,6 +457,10 @@
                 "sort": {
                     "type": "array",
                     "description": "排序"
+                },
+                "options": {
+                    "type": "object",
+                    "description": "额外选项"
                 }
             }
         },
