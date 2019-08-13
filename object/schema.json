@@ -422,6 +422,14 @@
                 "language": {
                     "type": "string",
                     "description": "模板名"
+                },
+                "create": {
+                    "type": "boolean",
+                    "description": "关联时是否允许创建"
+                },
+                "regEx": {
+                    "type": "string",
+                    "description": "正则表达式"
                 }
             }
         },
