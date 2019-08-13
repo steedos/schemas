@@ -253,7 +253,8 @@
                                 "selectCity",
                                 "audio",
                                 "filesize",
-                                "file"
+                                "file",
+                                "code"
                             ]
                         }
                     ]
@@ -417,6 +418,10 @@
                 "collection": {
                     "type": "string",
                     "description": "对应对象名"
+                },
+                "language": {
+                    "type": "string",
+                    "description": "模板名"
                 }
             }
         },
