@@ -36,7 +36,7 @@
             "description": "对象名称",
             "pattern": "^[_a-zA-Z][_a-zA-Z0-9]*$"
         },
-        "tableName": {
+        "table_name": {
             "type": "string",
             "description": "数据库表名称"
         },
