@@ -488,6 +488,10 @@
                 "options": {
                     "type": "object",
                     "description": "额外选项"
+                },
+                "show_count": {
+                    "type": "boolean",
+                    "description": "显示条目数"
                 }
             }
         },
