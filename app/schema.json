@@ -67,6 +67,14 @@
                 "description": "对象唯一标识。"
             }
         },
+        "mobile_objects": {
+            "type": "array",
+            "description": "用于指定此应用在手机上显示的对象。",
+            "items": {
+                "type": "string",
+                "description": "对象唯一标识。"
+            }
+        },
         "admin_menus": {
             "type": "array",
             "description": "管理员菜单",
