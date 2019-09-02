@@ -521,11 +521,13 @@
                 },
                 "on": {
                     "type": "string",
-                    "description": "显示位置, list: 显示在列表右上角; record: 显示在记录查看页右上角, record_more: 显示在记录查看页右上角'更多'按钮下",
+                    "description": "显示位置, list: 只显示在列表右上角; record: 显示在记录查看页右上角，以及列表视图中每项的下拉菜单中; record_more: 显示在记录查看页右上角的“更多”下拉菜单中，以及列表视图中每项的下拉菜单中; list_item: 只显示在列表视图中每项的下拉菜单中; record_only: 只显示在记录查看页右上角",
                     "enum": [
                         "list",
                         "record",
-                        "record_more"
+                        "record_more",
+                        "list_item",
+                        "record_only"
                     ]
                 },
                 "todo": {
@@ -535,10 +537,6 @@
                 "sort": {
                     "type": "number",
                     "description": "显示顺序"
-                },
-                "only_detail": {
-                    "type": "boolean",
-                    "description": "是否显示明细"
                 },
                 "is_file": {
                     "type": "boolean",
