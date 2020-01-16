@@ -284,7 +284,8 @@
                                 "filesize",
                                 "file",
                                 "code",
-                                "autonumber"
+                                "autonumber",
+                                "markdown"
                             ]
                         }
                     ]
