@@ -378,6 +378,10 @@
                     ],
                     "description": "引用的对象"
                 },
+                "optionsMethod":{
+                    "type": "string",
+                    "description": "获取可选择项的Meteor method名称"
+                },
                 "rows": {
                     "type": "integer",
                     "description": "多行文本默认行数"
